@@ -114,15 +114,20 @@
 
 .item-sizes ol {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     list-style: none;
     padding: 5px;
     height: 100%;
     width: 100%;
+    gap: 10px;
 }
 
 .item-sizes ol li {
     cursor: pointer;
     text-decoration: none;
     padding: 0px 15px;
+}
+
+.item-sizes ol li:hover{
+    border-bottom: 1px solid black;
 }

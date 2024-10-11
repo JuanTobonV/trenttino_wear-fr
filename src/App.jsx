@@ -38,6 +38,7 @@ const trenttinoProducts = [
     line: "Explorer",
     price: 142000,
     isNew: true,
+    size:["XS", "S", "M", "L", "XL"],
     mainImage: mainImageOne,
     secondaryImage: secondaryImageOne,
   },
@@ -49,6 +50,7 @@ const trenttinoProducts = [
     line: "Explorer",
     price: 142000,
     isNew: true,
+    size:["XS", "L"],
     mainImage: mainImageTwo,
     secondaryImage: secondaryImageTwo,
 
@@ -62,6 +64,7 @@ const trenttinoProducts = [
     line: "Origin",
     price: 106000,
     isNew: true,
+    size:["L"],
     mainImage: mainImageThree,
     secondaryImage:secondaryImageThree,
   },
@@ -74,6 +77,7 @@ const trenttinoProducts = [
     line: "Explorer",
     price: 142000,
     isNew: true,
+    size:["M"],
     mainImage: mainImageFour,
     secondaryImage:secondaryImageFour,
 
@@ -88,6 +92,7 @@ const trenttinoProducts = [
     line: "Élite",
     price: 196000,
     isNew: true,
+    size:["S"],
     mainImage: mainImageFive,
     secondaryImage:secondaryImageFive,
 
@@ -100,6 +105,7 @@ const trenttinoProducts = [
     line: "Élite",
     price: 196000,
     isNew: true,
+    size:["XS"],
     mainImage: mainImageFive,
     secondaryImage:secondaryImageFive,
 
@@ -112,6 +118,7 @@ const trenttinoProducts = [
     line: "Élite",
     price: 196000,
     isNew: true,
+    size:["M"],
     mainImage: mainImageFive,
     secondaryImage:secondaryImageFive,
 
@@ -136,6 +143,8 @@ function App() {
             line={product.line}
             price={product.price}
             isNew={product.isNew}
+            size={product.size} // Join array elements with two spaces
+
             mainImage={product.mainImage}
             secondaryImage={product.secondaryImage}
           

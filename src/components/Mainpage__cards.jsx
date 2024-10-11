@@ -27,11 +27,9 @@ function MainPage__cards(props) {
 
                     <div className='item-sizes glass'>
                         <ol>
-                            <li>XS</li>
-                            <li>S</li>
-                            <li>M</li>
-                            <li>L</li>
-                            <li>XL</li>
+                            {props.size.map((size, index) => (
+                                <li key={index}> {size} </li>
+                            ))}
                         </ol>
                     </div>
 
@@ -49,6 +47,8 @@ MainPage__cards.propTypes = {
     isNew: PropTypes.bool.isRequired,
     mainImage: PropTypes.string.isRequired,
     secondaryImage: PropTypes.string.isRequired,
+    size: PropTypes.node.isRequired,
+    
 };
 
 export { MainPage__cards };
