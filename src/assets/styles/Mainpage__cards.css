@@ -1,0 +1,128 @@
+
+
+.card {
+    width: 300px; 
+    height: 450px;/* Ajusta el tamaño según sea necesario */
+}
+
+.card__image {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    
+}
+
+.card__image img {
+    width: 100%;
+    height: auto;
+}
+
+.glass{
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: black;
+
+
+}
+
+.cardInfo__item {
+    position: absolute;
+    bottom: 2.5%;
+    left: 2.5%;
+    aspect-ratio: 20/6;
+    width: 95%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    font-family: "montserrat";
+}
+
+.card__item--new{
+    position: absolute;
+    top: 2.5%;
+    right: 2.5%;
+    font-family: "montserrat";
+    font-weight: 500;
+}
+
+.card__item--new::after{
+    content: '';
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 7px;
+    
+}
+
+.cardInfo__item--price{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.cardInfo__item--title{
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.cardInfo__item--line, .cardInfo__item--genre{
+    font-size: 14px;
+}
+
+.item-Hover{
+    position: absolute;
+    transform-origin: bottom center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+}
+
+.card:hover .item-Hover {
+    opacity: 1;
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .item-sizes {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.item-sizes {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    z-index: 100;
+    bottom: 33.33%;
+    opacity: 0;
+}
+
+.item-sizes ol {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+.item-sizes ol li {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0px 15px;
+}
