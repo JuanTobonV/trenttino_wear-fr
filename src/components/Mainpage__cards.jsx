@@ -1,19 +1,19 @@
 import '../assets/styles/Mainpage__cards.css';
-import imagen1 from '../assets/img/km4444-cf1.jpg'
-import imagen2 from '../assets/img/km4444-cf2.jpg'
+import PropTypes from 'prop-types';
 
-function MainPage__cards() {
+
+function MainPage__cards(props) {
     return (
         <section className="cards__container">
             <div className="card">
                 <div className="card__image">
-                    <img src={imagen1} />
+                    <img src= {props.mainImage} />
                     
                     <div className="cardInfo__item glass">
-                        <span className='cardInfo__item--line'>Explorer</span>
-                        <h4 className='cardInfo__item--title'>Jersey Explorer</h4>
-                        <span className='cardInfo__item--genre'>Unisex Naranja</span>
-                        <span className='cardInfo__item--price'>$ 142.000</span>
+                        <span className='cardInfo__item--line'>{props.line}</span>
+                        <h4 className='cardInfo__item--title'>{props.name}</h4>
+                        <span className='cardInfo__item--genre'>{props.genre}</span>
+                        <span className='cardInfo__item--price'>$ {props.price}</span>
                         
                     </div>
 
@@ -22,7 +22,7 @@ function MainPage__cards() {
                     </div>
 
                     <div className='item-Hover'>
-                        <img src={imagen2} alt="" />
+                        <img src = {props.secondaryImage}alt="" />
                     </div>
 
                     <div className='item-sizes glass'>
@@ -40,5 +40,8 @@ function MainPage__cards() {
         </section>
     );
 }
+MainPage__cards.propTypes = {
+    mainImage: PropTypes.string.isRequired,
+};
 
 export { MainPage__cards };
