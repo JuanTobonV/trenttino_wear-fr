@@ -1,0 +1,11 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: "Nunito", sans-serif;
+
+}
+
+.cards__container{
+    display: flex;
+    gap: 10px;
+}
