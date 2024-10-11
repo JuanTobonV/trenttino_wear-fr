@@ -1,22 +1,51 @@
 
 
-.card {
+.cards__container {
+    display: flex;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Hace que el desplazamiento se ajuste a los elementos */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    padding: 20px; /* Espacio alrededor del contenedor */
+  }
+  
+  .card {
+    flex: 0 0 auto; /* Evita que las tarjetas se reduzcan de tamaño */
+    scroll-snap-align: start; /* Alinea cada tarjeta al inicio del contenedor */
+    margin-right: 20px; /* Espacio entre las tarjetas */
     width: 300px; 
-    height: 450px;/* Ajusta el tamaño según sea necesario */
-}
-
-.card__image {
+    height: 450px; /* Ajusta el tamaño según sea necesario */
+  }
+  
+  .card__image {
     display: flex;
     gap: 10px;
     position: relative;
-    
-}
-
-.card__image img {
+  }
+  
+  .card__image img {
     width: 100%;
-    height: auto;
-}
-
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .carousel-button.left {
+    left: 10px;
+  }
+  
+  .carousel-button.right {
+    right: 10px;
+  }
+  
 .glass{
     background-color: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
     backdrop-filter: blur(4px);

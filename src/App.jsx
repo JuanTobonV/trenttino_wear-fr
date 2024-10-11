@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import {useRef} from 'react';
 import './App.css'
-import {MainPage__cards} from './components/Mainpage__cards';
+import MainPage__cards from './components/Mainpage__cards';
 
 {/* id No. 1 images*/}
 import mainImageOne from './assets/img/conFondo/km4444-cf1.jpg'
@@ -128,35 +128,38 @@ const trenttinoProducts = [
 
 function App() {
 
+  const containerRef = useRef(null);
+
+  const scrollLeft = () => {
+    containerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+  };
+
+  const scrollRight = () => {
+    containerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+  };
+
 
   return (
 
-    <>
-      
-      <div className='cards__container'>
-        
-        {trenttinoProducts.map(product => (
-          <MainPage__cards
-            key={product.id}
-            name={product.name}
-            genre={product.genre}
-            line={product.line}
-            price={product.price}
-            isNew={product.isNew}
-            size={product.size}
-            mainImage={product.mainImage}
-            secondaryImage={product.secondaryImage}
-          
-          />
-        ))}
-        
-        
-        
-      </div>
-
-
-
-    </>
+    <div className="App" style={{ position: 'relative' }}>
+    <button className="carousel-button left" onClick={scrollLeft}>Anterior</button>
+    <div className='cards__container' ref={containerRef}>
+      {trenttinoProducts.map(product => (
+        <MainPage__cards
+          key={product.id}
+          name={product.name}
+          genre={product.genre}
+          line={product.line}
+          price={product.price}
+          isNew={product.isNew}
+          size={product.size}
+          mainImage={product.mainImage}
+          secondaryImage={product.secondaryImage}
+        />
+      ))}
+    </div>
+    <button className="carousel-button right" onClick={scrollRight}>Siguiente</button>
+    </div>
   )
 }
 
