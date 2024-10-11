@@ -143,8 +143,7 @@ function App() {
             line={product.line}
             price={product.price}
             isNew={product.isNew}
-            size={product.size} // Join array elements with two spaces
-
+            size={product.size}
             mainImage={product.mainImage}
             secondaryImage={product.secondaryImage}
           
