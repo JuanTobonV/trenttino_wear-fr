@@ -40,8 +40,15 @@ function MainPage__cards(props) {
         </section>
     );
 }
+
 MainPage__cards.propTypes = {
+    name: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    line: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    isNew: PropTypes.bool.isRequired,
     mainImage: PropTypes.string.isRequired,
+    secondaryImage: PropTypes.string.isRequired,
 };
 
 export { MainPage__cards };

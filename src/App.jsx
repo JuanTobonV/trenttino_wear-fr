@@ -1,4 +1,4 @@
-
+import {useState} from 'react';
 import './App.css'
 import {MainPage__cards} from './components/Mainpage__cards';
 
@@ -14,16 +14,16 @@ import secondaryImageTwo from './assets/img/sinFondo/km4444-sf2.png'
 import mainImageThree from './assets/img/conFondo/km4444-cf3.jpg'
 import secondaryImageThree from './assets/img/sinFondo/km4444-sf3.png'
 
-{/* id No. 4 images
-import mainImageOne from './assets/img/km4444-cf1.jpg'
-import secondaryImageOne from './assets/img/sinFondo/km4444-sf1.png'
+{/* id No. 4 images */}
+import mainImageFour from './assets/img/conFondo/km4444-cf4.jpg'
+import secondaryImageFour from './assets/img/sinFondo/km4444-sf4.png'
 
-{/* id No. 5 images
-import mainImageOne from './assets/img/km4444-cf1.jpg'
-import secondaryImageOne from './assets/img/sinFondo/km4444-sf1.png'
+{/* id No. 5 images*/}
+import mainImageFive from './assets/img/conFondo/km4444-cf5.jpg'
+import secondaryImageFive from './assets/img/sinFondo/km4444-sf5.png'
 
 {/* id No. 6 images
-import mainImageOne from './assets/img/km4444-cf1.jpg'
+import mainImageSix from './assets/img/conFondo/'
 import secondaryImageOne from './assets/img/sinFondo/km4444-sf1.png'*/}
 
 
@@ -74,8 +74,10 @@ const trenttinoProducts = [
     line: "Explorer",
     price: 142000,
     isNew: true,
-    mainImage: image2,
-    
+    mainImage: mainImageFour,
+    secondaryImage:secondaryImageFour,
+
+
 
   },
     
@@ -86,18 +88,44 @@ const trenttinoProducts = [
     line: "Élite",
     price: 196000,
     isNew: true,
-    image: image2,
+    mainImage: mainImageFive,
+    secondaryImage:secondaryImageFive,
+
+  }, 
+
+  {
+    id: 6,
+    name: "Jersey Garda",
+    genre: "Masculino azúl",
+    line: "Élite",
+    price: 196000,
+    isNew: true,
+    mainImage: mainImageFive,
+    secondaryImage:secondaryImageFive,
+
+  }, 
+
+  {
+    id: 7,
+    name: "Jersey Garda",
+    genre: "Masculino azúl",
+    line: "Élite",
+    price: 196000,
+    isNew: true,
+    mainImage: mainImageFive,
+    secondaryImage:secondaryImageFive,
+
   }, 
 
 ]
 
 function App() {
-  
+
 
   return (
+
     <>
       
-
       <div className='cards__container'>
         
         {trenttinoProducts.map(product => (
